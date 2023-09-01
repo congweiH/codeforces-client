@@ -2,8 +2,6 @@ import { Config } from "./config.js";
 import crypto from "crypto";
 import fetch from "node-fetch";
 
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
-
 export class Api {
   static getUrl(methodName, params = {}) {
     const time = parseInt(Date.now() / 1000);
@@ -25,8 +23,6 @@ export class Api {
       return x[0].localeCompare(y[0]);
     });
 
-    console.log(paramList);
-
     let hash = crypto.createHash("sha512");
 
     let toHash = `${randomInt}/${methodName}?`;
@@ -34,7 +30,6 @@ export class Api {
       if (i > 0) {
         toHash += "&";
       }
-      console.log(i, paramList[i][0]);
       toHash += `${paramList[i][0]}=${paramList[i][1]}`;
     }
     toHash += `#${Config.secret}`;

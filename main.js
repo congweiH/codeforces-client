@@ -1,5 +1,4 @@
 import { Api } from "./api.js";
+import { Config } from "./config.js";
 
-const res = await Api.getContestList();
-
-console.log(res);
+export { Api, Config };
