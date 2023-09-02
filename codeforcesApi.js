@@ -1,7 +1,7 @@
 import crypto from "crypto";
 import fetch from "node-fetch";
 
-export class CfApi {
+export class CodeforcesApi {
   static basePath = "https://codeforces.com/api";
 
   static apiKey = "";

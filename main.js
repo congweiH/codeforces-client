@@ -1,3 +1,3 @@
-import { CfApi } from "./cfApi.js";
+import { CodeforcesApi } from "./codeforcesApi.js";
 
-export { CfApi };
+export { CodeforcesApi };
