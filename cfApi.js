@@ -135,4 +135,91 @@ export class CfApi {
     );
     return response.json();
   }
+
+  static async getProblemsetProblems({ tags, problemsetName }) {
+    const response = await fetch(
+      this.getUrl("problemset.problems", {
+        tags,
+        problemsetName,
+      })
+    );
+    return response.json();
+  }
+
+  static async getProblemsetRecentStatus(count, { problemsetName }) {
+    const response = await fetch(
+      this.getUrl("problemset.recentStatus", {
+        count,
+        problemsetName,
+      })
+    );
+    return response.json();
+  }
+
+  static async getProblemsetRecentStatus(maxCount) {
+    const response = await fetch(
+      this.getUrl("recentActions", {
+        maxCount,
+      })
+    );
+    return response.json();
+  }
+
+  static async getUserBlogEntries(handle) {
+    const response = await fetch(
+      this.getUrl("user.blogEntries", {
+        handle,
+      })
+    );
+    return response.json();
+  }
+
+  static async getUserFriends(onlyOnline) {
+    const response = await fetch(
+      this.getUrl("user.friends", {
+        onlyOnline,
+      })
+    );
+    return response.json();
+  }
+
+  static async getUserInfo(handles) {
+    const response = await fetch(
+      this.getUrl("user.info", {
+        handles,
+      })
+    );
+    return response.json();
+  }
+
+  static async getUserRatedList({ activeOnly, includeRetired, contestId }) {
+    const response = await fetch(
+      this.getUrl("user.ratedList", {
+        activeOnly,
+        includeRetired,
+        contestId,
+      })
+    );
+    return response.json();
+  }
+
+  static async getUserRating(handle) {
+    const response = await fetch(
+      this.getUrl("user.rating", {
+        handle,
+      })
+    );
+    return response.json();
+  }
+
+  static async getUserStatus(handle, { from, count }) {
+    const response = await fetch(
+      this.getUrl("user.status", {
+        handle,
+        from,
+        count,
+      })
+    );
+    return response.json();
+  }
 }
