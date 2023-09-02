@@ -1,4 +1,3 @@
-import { Api } from "./api.js";
-import { Config } from "./config.js";
+import { CfApi } from "./cfApi.js";
 
-export { Api, Config };
+export { CfApi };
