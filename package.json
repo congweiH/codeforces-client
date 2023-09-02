@@ -1,6 +1,6 @@
 {
   "name": "@congwei1104/codeforces-api",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "codeforces's apis",
   "type": "module",
   "main": "main.js",
