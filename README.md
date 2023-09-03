@@ -1,14 +1,14 @@
 导入
 
 ```bash
-npm install @congwei1104/codeforces-api
+npm install @congwei1104/codeforces-client
 ```
 
 使用
 
 ```js
-import { CodeforcesApi } from "@congwei1104/codeforces-api";
+import { CodeforcesClient } from "@congwei1104/codeforces-client";
 
 // 获取比赛列表
-const res = await CodeforcesApi.getContestList();
+const res = await CodeforcesClient.sendRequest("contest.list");
 ```
